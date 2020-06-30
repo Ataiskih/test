@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+{% include 'includes/success.html' %}
+
+<h4>Комментарий</h4>
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button class="btn btn-outline-dark">Сохранить</button>
+</form>
+
+{% endblock %}
